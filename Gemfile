@@ -36,6 +36,9 @@ gem 'devise', '~> 4.3'
 # database
 gem 'pg', '~> 0.21.0'
 
+#sentry
+gem "sentry-raven"
+
 #views
 gem 'simple_form', '~> 3.5'
 gem 'haml', '~> 5.0', '>= 5.0.4'
