@@ -1,0 +1,10 @@
+.ui.secondary.menu
+  %a= link_to 'WTravel', root_path, class: 'item active'
+  %a.item Notificaciones
+  .right.menu
+    %a.ui.item Mensajes
+    %a= link_to 'Nuevo Usuario', new_user_registration_path, class: 'ui item'
+    - if user_signed_in?
+      %a= link_to 'Cerrar', destroy_user_session_path, class: 'ui item'
+    - else
+      %a= link_to 'Iniciar Sesion', new_user_session_path , class: 'ui item'

@@ -1,0 +1,17 @@
+.section-actions
+  %a= link_to 'Nuevo', new_role_path, class: 'ui primary button'
+  %a= link_to 'Regresar', root_path, class: 'ui button'
+.section-shared
+
+.section-content
+  %table.ui.selectable.celled.table
+    %thead
+      %tr
+        %th Nombres
+        %th{:colspan =>"2"}
+    %tbody
+      - @roles.each do |role|
+        %tr
+          %td= role.name.capitalize
+          %td= link_to 'Ver', role_path(role)
+          %td= link_to 'Editar', edit_role_path(role)

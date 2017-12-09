@@ -1,0 +1,14 @@
+= simple_form_for @user do |f|
+  = f.input :fname
+  = f.input :lname
+  = f.input :jobtitle
+  = f.input :document
+  = f.input :phone
+  = f.input :username
+  = f.input :email
+  = f.input :role_id, collection: Role.all, include_blank: '-Seleccione Rol-'
+  = f.input :status_user_id, collection: StatusUser.all, include_blank: '-Seleccione Estado-'
+  - if @user.id.nil?
+    = f.input :password
+    = f.input :password_confirmation
+  = f.button :submit, t('buttons.save')

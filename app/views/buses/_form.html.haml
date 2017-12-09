@@ -1,0 +1,8 @@
+- method = ('post' if @bus.new_record?) || 'put'
+- action = ('create' if @bus.new_record?) || 'update'
+
+= simple_form_for @bus, url: url_for(action: action), method: method do |f|
+  = f.input :name
+  = f.input :num_policy
+  = f.input :status
+  = f.button :submit, t("buttons.save")

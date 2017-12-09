@@ -1,0 +1,2 @@
+class Settings::TravelRoutesController
+end

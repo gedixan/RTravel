@@ -1,0 +1,21 @@
+%p= link_to 'Crear Asiento', new_bus_seating_path
+
+%table
+  %tr
+    %th Bus
+    %th Descripcion bus
+    %th Asiento
+    %th Codigo de Salida
+    %th Estado
+    %th
+  - @seatings.each do |seating|
+    %tr
+      %td= seating.bus_name
+      %td= seating.bus_description
+      %td= seating.name
+      %td= seating.bus_time_departure
+      %td= seating.status
+      %td= link_to 'Actualizar', edit_bus_seating_path(@bus, seating)
+      %td= link_to 'Eliminar', [@bus, seating], method: :delete, data: {confirm: 'Esta seguro de eliminar?'}
+
+%p= link_to 'Regresar', buses_path

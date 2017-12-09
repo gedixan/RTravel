@@ -1,0 +1,21 @@
+%h2 Buses - Index
+%a=link_to 'Nuevo bus', new_bus_path
+
+%table
+  %tr
+    %th Nombre bus
+    %th Póliza
+    %th
+    %th
+    %th
+    - @buses.each do |bus|
+      %tr
+        %td= bus.name
+        %td= bus.num_policy
+        %td= bus.status
+        %td= link_to 'Ver', bus_path(bus)
+        %td= link_to 'Editar', edit_bus_path(bus)
+        %td= link_to 'Eliminar', bus_path(bus), method: :delete, data: {confirm: 'Esta seguro de eliminar?'}
+        %td= link_to 'Asientos', bus_seatings_path(bus)
+
+%a= link_to 'Regresar inicio', root_path

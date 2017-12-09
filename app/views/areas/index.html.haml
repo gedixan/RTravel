@@ -1,0 +1,7 @@
+%h3 Index - Areas
+%a= link_to 'Crear nueva area', new_area_path
+.container
+  %span Lista de todas las areas
+
+- @areas.each do |area|
+  %p.color-tag{style: "background-color: #{area.color}"}= area.name

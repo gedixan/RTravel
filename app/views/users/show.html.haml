@@ -1,0 +1,27 @@
+%a= link_to 'Regresar', users_path
+.clear
+
+.date-user
+  %strong Nombres
+  %p= @user.fname
+
+  %strong Apellidos
+  %p= @user.lname
+
+  %strong Ocupación
+  %p= @user.jobtitle
+
+  %strong Telefono
+  %p= @user.phone
+
+  %strong Usuario
+  %p= @user.username
+
+  %strong Correo
+  %p= @user.email
+
+  %strong Rol
+  %p= @user.role.name
+
+  %strong Estado
+  %p= @user.status_user.name

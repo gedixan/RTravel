@@ -1,0 +1,3 @@
+class Driver < Person
+
+end

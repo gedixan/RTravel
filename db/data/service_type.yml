@@ -1,0 +1,15 @@
+- name: Estandar
+  code: EST
+  status: true
+
+- name: Express
+  code: EXP
+  status: true
+
+- name: VIP
+  code: VIP
+  status: true
+
+- name: Super VIP
+  code: SUV
+  status: true

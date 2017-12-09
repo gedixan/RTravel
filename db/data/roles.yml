@@ -1,0 +1,19 @@
+- :name: admin
+  :is_base: true
+  :is_agent: false
+  :is_supervisor: false
+
+- :name: administrador
+  :is_base: true
+  :is_agent: true
+  :is_supervisor: true
+
+- :name: supervisor
+  :is_base: true
+  :is_agent: false
+  :is_supervisor: true
+
+- :name: recepcionista
+  :is_base: true
+  :is_agent: true
+  :is_supervisor: false

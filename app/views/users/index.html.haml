@@ -1,0 +1,32 @@
+.section-actions
+  %a= link_to 'Nuevo', new_user_path, class: 'ui primary button'
+  %a= link_to 'Regresar', root_path, class: 'ui button'
+.section-shared
+
+.section-content
+  %table.ui.selectable.celled.table
+    %thead
+      %tr
+        %th Nombre
+        %th Apellidos
+        %th Usuario
+        %th Email
+        %th Rol
+        %th Estado
+        %th Fullname
+        %th
+        %th
+        %th
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user.fname
+          %td= user.lname
+          %td= user.username
+          %td= user.email
+          %td= user.role.name
+          %td= user.status_user.name
+          %td= user.full_name
+          %td= link_to 'ver', user_path(user)
+          %td= link_to 'Actualizar', edit_user_path(user)
+          %td= link_to 'Eliminar', user_path(user), method: :delete, data: {confirm:'Está seguro de eliminar?'}

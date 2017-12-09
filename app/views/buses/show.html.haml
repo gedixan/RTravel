@@ -1,0 +1,12 @@
+%p= link_to 'Regresar' ,buses_path
+
+%h2 Bus
+.info
+  %strong Nombre
+  %p= @bus.name
+
+  %strong Poliza
+  %p= @bus.num_policy
+
+  %strong Estado
+  %p= @bus.status

@@ -1,0 +1,17 @@
+
+.header-section
+  %h1.ui.center.aligned.header SISTEMA - WTRAVEL
+  %strong= 'BIENVENIDO:: '
+.menu-modulos
+  .ui.vertical.pinting.menu
+    %a.item.active Inicio
+    %a.item Pasajeros
+    %a.item Conductores
+    %a= link_to 'Buses', buses_path, class: 'item'
+    %a.item Viajes
+    %a= link_to 'Areas', areas_path, class: 'item'
+    %a= link_to 'Roles', roles_path, class: 'item'
+    %a= link_to 'Usuarios', users_path, class: 'item'
+    %a.item Reportes
+    %a.item Configuración
+
