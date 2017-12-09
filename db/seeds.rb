@@ -8,22 +8,22 @@
 
 p "START SEEDS"
 
-# p "roles"
-# path = File.expand_path("roles.yml", "db/data")
-# YAML.load_file(path).each do |role|
-#   Role.where(role).first_or_create!
-# end
+ p "roles"
+ path = File.expand_path("roles.yml", "db/data")
+ YAML.load_file(path).each do |role|
+   Role.where(role).first_or_create!
+ end
 
-# p "status user"
-# path = File.expand_path("status_user.yml", "db/data")
-# YAML.load_file(path).each do |status_user|
-#   StatusUser.where(status_user).first_or_create!
-# end
+ p "status user"
+ path = File.expand_path("status_user.yml", "db/data")
+ YAML.load_file(path).each do |status_user|
+   StatusUser.where(status_user).first_or_create!
+ end
 
-# p "service type"
-# path = File.expand_path("service_type.yml","db/data")
-# YAML.load_file(path).each do |service_type|
-# 	ServiceType.where(service_type).first_or_create!
-# end
+ p "service type"
+ path = File.expand_path("service_type.yml","db/data")
+ YAML.load_file(path).each do |service_type|
+  ServiceType.where(service_type).first_or_create!
+ end
 
 p "SUCESSFULL"
