@@ -5,8 +5,8 @@ class Bus < ApplicationRecord
   scope :actives, -> { where(status: true) }
   scope :have_locked, -> { self.actives.where(locked: true) }
 
-  def time_departure
-    _time = Time.now
-    "#{self.name[0,2]}" + "-"  + _time.strftime("%H:%M")
-  end
+  #def time_departure
+  #  _time = Time.now
+  #  "#{self.name[0,2]}" + "-"  + _time.strftime("%H:%M")
+  #end
 end
